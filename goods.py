@@ -1,3 +1,11 @@
+import os
+if os.path.isfile('goods.csv'):
+	print('yeah!!found the file!!')
+else:
+	print('not found!!')
+
+
+
 goods = []
 
 with open('goods.csv', 'r', encoding='utf-8') as f:
