@@ -8,4 +8,8 @@ while True:
 print(goods)
 #print(goods[0][1])#第1個大清單中的第2個欄位
 
+for p in goods:
+	print(p)
+	print(p[0], '的價格是', p[1])
+
 
