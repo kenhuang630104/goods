@@ -1,21 +1,18 @@
 import os
-if os.path.isfile('goods.csv'):
-	print('yeah!!found the file!!')
-else:
-	print('not found!!')
-
 
 
 goods = []
-
-with open('goods.csv', 'r', encoding='utf-8') as f:
-	for line in f:
-		if '商品,價格' in line:
-			continue
-		name, price = line.strip().split(',')
-		goods.append([name, price])
-print(goods)
-
+if os.path.isfile('goods.csv'):
+    print('yeah!!found the file!!')
+    with open('goods.csv', 'r', encoding='utf-8') as f:
+        for line in f:
+            if '商品,價格' in line:
+                continue
+            name, price = line.strip().split(',')
+            goods.append([name, price])
+    print(goods)
+else:
+    print('not found!!')
 
 while True:
 	name = input('please input the product name:  or \'q\'for exit!!')
